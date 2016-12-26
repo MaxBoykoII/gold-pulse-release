@@ -1,0 +1,22 @@
+{
+  "name": "develop",
+  "description": "development",
+  "main": "app/main.ts",
+  "authors": [
+    "maxboyko <maxboykomax@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "easyfont-oswald": "easyfont/oswald",
+    "bootstrap": "^3.3.7",
+    "font-awesome": "^4.7.0"
+  }
+}
