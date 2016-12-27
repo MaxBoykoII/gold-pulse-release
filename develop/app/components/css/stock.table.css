@@ -1,0 +1,53 @@
+.highlight {
+  background-color: white;
+  color: black;
+  font-weight: bold; }
+
+a {
+  color: #4d7598; }
+
+table thead {
+  background-color: #FAF3DD; }
+
+.red {
+  background-color: #f5e6e0; }
+
+.yellow {
+  background-color: #eae3a1; }
+
+.blue {
+  background-color: #8cafce; }
+
+.green {
+  background-color: #a1c299; }
+
+table caption {
+  width: 100%;
+  text-align: center; }
+
+.legend {
+  list-style: none;
+  display: inline-block; }
+
+.legend li {
+  display: inline-block;
+  margin-right: 10px; }
+
+.legend span {
+  border: 1px solid #ccc;
+  float: left;
+  width: 12px;
+  height: 12px;
+  margin: 2px; }
+
+.legend .q1 {
+  background-color: #f5e6e0; }
+
+.legend .q2 {
+  background-color: #eae3a1; }
+
+.legend .q3 {
+  background-color: #8cafce; }
+
+.legend .q4 {
+  background-color: #a1c299; }
