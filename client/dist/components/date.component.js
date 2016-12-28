@@ -10,10 +10,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require("@angular/core");
 var date_service_1 = require("../services/date.service");
+var data_service_1 = require("../services/data.service");
 var constants_1 = require("../constants");
 var DateComponent = (function () {
-    function DateComponent(dateService) {
-        this.dateService = dateService;
+    function DateComponent(_dateService, _dataService) {
+        this._dateService = _dateService;
+        this._dataService = _dataService;
         this.hpOptions = constants_1.hpOptions;
         this.jump = constants_1.jump;
         this.jumpOptions = constants_1.jumpOptions;
@@ -29,12 +31,19 @@ var DateComponent = (function () {
     }
     DateComponent.prototype.ngOnInit = function () {
         var _this = this;
-        this.dateService.getValidDates().subscribe(function (dates) {
+        this._dateService.getValidDates().subscribe(function (dates) {
             _this.validDates = dates;
             var length = dates.length;
             if (length) {
                 _this.min = dates[0];
                 _this.max = dates[length - 1];
+            }
+        });
+        this._dataService.config().subscribe(function (config) {
+            if (config.jump) {
+                _this.jump = config.jump.default;
+                _this.jumpOptions = config.jump.values;
+                _this.jumpTooltip = config.jump.tooltip;
             }
         });
     };
@@ -98,6 +107,6 @@ DateComponent = __decorate([
         templateUrl: './templates/date.component.html',
         styleUrls: ['./css/date.component.css']
     }),
-    __metadata("design:paramtypes", [date_service_1.DateService])
+    __metadata("design:paramtypes", [date_service_1.DateService, data_service_1.DataService])
 ], DateComponent);
 exports.DateComponent = DateComponent;

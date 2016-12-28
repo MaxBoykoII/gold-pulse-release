@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 
 /* Service imports */
 import { DateService } from '../services/date.service';
+import { DataService } from '../services/data.service';
 
 /* App constants */
 import { hpOptions, jump, jumpOptions, gap, gapOptions } from '../constants';
@@ -19,6 +20,7 @@ export class DateComponent {
     hpOptions = hpOptions
     jump = jump
     jumpOptions = jumpOptions
+    jumpTooltip
     gap = gap
     gapOptions = gapOptions
     validDates = []
@@ -30,14 +32,21 @@ export class DateComponent {
     @Output() updateHp = new EventEmitter()
     min
     max
-    constructor(private dateService: DateService) {}
+    constructor(private _dateService: DateService, private _dataService: DataService) {}
     ngOnInit() {
-        this.dateService.getValidDates().subscribe(dates => {
+        this._dateService.getValidDates().subscribe(dates => {
             this.validDates = dates;
             const length = dates.length
             if (length) {
                 this.min = dates[0];
                 this.max = dates[length - 1];
+            }
+        });
+        this._dataService.config().subscribe(config => {
+            if (config.jump) {
+                this.jump = config.jump.default;
+                this.jumpOptions = config.jump.values;
+                this.jumpTooltip = config.jump.tooltip;
             }
         });
     }

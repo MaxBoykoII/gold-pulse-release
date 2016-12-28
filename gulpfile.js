@@ -100,7 +100,7 @@ gulp.task('copy:dist', () => {
  */
 
 gulp.task('compile:ts', () => {
-    return gulp.src(['./develop/app/**/*.ts', './develop/typings/index.d.ts'])
+    return gulp.src(['./develop/app/**/*.ts', './develop/typings/index.d.ts', '!./develop/app/main-aot.ts'])
         .pipe($.typescript(tscConfig.compilerOptions))
         .pipe(gulp.dest('./client/dist'));
 });
