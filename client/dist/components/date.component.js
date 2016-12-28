@@ -45,6 +45,10 @@ var DateComponent = (function () {
                 _this.jumpOptions = config.jump.values;
                 _this.jumpTooltip = config.jump.tooltip;
             }
+            if (config.hold) {
+                _this.hpOptions = config.hold.values;
+                _this.hpTootlip = config.hold.tooltip;
+            }
         });
     };
     DateComponent.prototype.flag = function (event) {

@@ -20,7 +20,7 @@
     <div class='div-inline'>
         <ul class='nav nav-tabs'>
             <li class="active dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="">Holding Period: {{hp}}  trading {{(hp === 1)? 'day': 'days'}}<span class="caret"></span></a>
+                <a class="dropdown-toggle" data-toggle="dropdown" href="" [title]="hpTootlip">Holding Period: {{hp}}  trading {{(hp === 1)? 'day': 'days'}}<span class="caret"></span></a>
                 <ul class="dropdown-menu">
                     <li *ngFor='let hpOption of hpOptions'><a href="#" (click)='updateHoldingPeriod(hpOption)'>{{hpOption}}</a></li>
                 </ul>

@@ -103,6 +103,9 @@ var ExplorationViewer = (function () {
                 _this.title = config.title;
                 _this.subtitle = config.subtitle;
             }
+            if (config.default_date) {
+                _this.currentDate = config.default_date;
+            }
             if (config.limit) {
                 _this.limit = config.limit.default;
                 _this.limitOptions = config.limit.values;
@@ -114,6 +117,9 @@ var ExplorationViewer = (function () {
                 _this.spreadOptions = config.spread.values;
                 _this.spreadTootlip = config.spread.tooltip;
                 _this.spreadText = config.spread.title;
+            }
+            if (config.hold) {
+                _this.hp = config.hold.default;
             }
         });
         this._dataService.getData(this.currentDate).subscribe(function (processedData) {

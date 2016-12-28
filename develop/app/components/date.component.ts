@@ -18,6 +18,7 @@ export class DateComponent {
     @Input() currentDate
     @Input() hp
     hpOptions = hpOptions
+    hpTootlip
     jump = jump
     jumpOptions = jumpOptions
     jumpTooltip
@@ -47,6 +48,10 @@ export class DateComponent {
                 this.jump = config.jump.default;
                 this.jumpOptions = config.jump.values;
                 this.jumpTooltip = config.jump.tooltip;
+            }
+            if (config.hold) {
+                this.hpOptions = config.hold.values;
+                this.hpTootlip = config.hold.tooltip;
             }
         });
     }

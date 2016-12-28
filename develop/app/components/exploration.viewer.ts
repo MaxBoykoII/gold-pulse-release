@@ -145,17 +145,23 @@ export class ExplorationViewer implements OnInit {
         this.title = config.title;
         this.subtitle = config.subtitle;
       }
+      if (config.default_date) {
+       this.currentDate = config.default_date; 
+      }
       if (config.limit){
         this.limit = config.limit.default;
         this.limitOptions = config.limit.values;
         this.limitTooltip = config.limit.tooltip;
         this.limitText = config.limit.title;
       }
-      if (config.spread){
+      if (config.spread) {
         this.spread = config.spread.default;
         this.spreadOptions = config.spread.values;
         this.spreadTootlip = config.spread.tooltip;
         this.spreadText = config.spread.title;
+      }
+      if (config.hold) {
+        this.hp = config.hold.default;
       }
     });
 
