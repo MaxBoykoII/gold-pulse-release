@@ -14,24 +14,25 @@ import * as import5 from '@angular/core/src/metadata/view';
 import * as import6 from '@angular/core/src/linker/view_type';
 import * as import7 from '@angular/core/src/linker/component_factory';
 import * as import8 from '../../../app/services/date.service';
-import * as import9 from './css/date.component.css.shim';
-import * as import10 from '../../node_modules/@angular/forms/src/directives/ng_form.ngfactory';
-import * as import11 from '../../node_modules/@angular/forms/src/directives/ng_control_status.ngfactory';
-import * as import12 from '../../node_modules/@angular/forms/src/directives/default_value_accessor.ngfactory';
-import * as import13 from '../../node_modules/@angular/forms/src/directives/ng_model.ngfactory';
-import * as import14 from '@angular/core/src/linker/view_container';
-import * as import15 from '../../node_modules/@angular/common/src/directives/ng_for.ngfactory';
-import * as import16 from '@angular/core/src/linker/element_ref';
-import * as import17 from '@angular/core/src/linker/template_ref';
-import * as import18 from '@angular/core/src/change_detection/differs/iterable_differs';
-import * as import19 from '@angular/forms/src/directives/default_value_accessor';
-import * as import20 from '@angular/forms/src/directives/control_value_accessor';
-import * as import21 from '@angular/forms/src/directives/ng_model';
-import * as import22 from '@angular/forms/src/directives/ng_control';
-import * as import23 from '@angular/forms/src/directives/ng_control_status';
-import * as import24 from '@angular/common/src/directives/ng_for';
-import * as import25 from '@angular/forms/src/directives/ng_form';
-import * as import26 from '@angular/forms/src/directives/control_container';
+import * as import9 from '../../../app/services/data.service';
+import * as import10 from './css/date.component.css.shim';
+import * as import11 from '../../node_modules/@angular/forms/src/directives/ng_form.ngfactory';
+import * as import12 from '../../node_modules/@angular/forms/src/directives/ng_control_status.ngfactory';
+import * as import13 from '../../node_modules/@angular/forms/src/directives/default_value_accessor.ngfactory';
+import * as import14 from '../../node_modules/@angular/forms/src/directives/ng_model.ngfactory';
+import * as import15 from '@angular/core/src/linker/view_container';
+import * as import16 from '../../node_modules/@angular/common/src/directives/ng_for.ngfactory';
+import * as import17 from '@angular/core/src/linker/element_ref';
+import * as import18 from '@angular/core/src/linker/template_ref';
+import * as import19 from '@angular/core/src/change_detection/differs/iterable_differs';
+import * as import20 from '@angular/forms/src/directives/default_value_accessor';
+import * as import21 from '@angular/forms/src/directives/control_value_accessor';
+import * as import22 from '@angular/forms/src/directives/ng_model';
+import * as import23 from '@angular/forms/src/directives/ng_control';
+import * as import24 from '@angular/forms/src/directives/ng_control_status';
+import * as import25 from '@angular/common/src/directives/ng_for';
+import * as import26 from '@angular/forms/src/directives/ng_form';
+import * as import27 from '@angular/forms/src/directives/control_container';
 export class Wrapper_DateComponent {
   /*private*/ _eventHandler:Function;
   context:import0.DateComponent;
@@ -40,9 +41,9 @@ export class Wrapper_DateComponent {
   /*private*/ _expr_1:any;
   subscription0:any;
   subscription1:any;
-  constructor(p0:any) {
+  constructor(p0:any,p1:any) {
     this._changed = false;
-    this.context = new import0.DateComponent(p0);
+    this.context = new import0.DateComponent(p0,p1);
     this._expr_0 = import1.UNINITIALIZED;
     this._expr_1 = import1.UNINITIALIZED;
   }
@@ -95,7 +96,7 @@ class View_DateComponent_Host0 extends import2.AppView<any> {
   createInternal(rootSelector:string):import7.ComponentRef<any> {
     this._el_0 = import3.selectOrCreateRenderHostElement(this.renderer,'date-component',import3.EMPTY_INLINE_ARRAY,rootSelector,(null as any));
     this.compView_0 = new View_DateComponent0(this.viewUtils,this,0,this._el_0);
-    this._DateComponent_0_3 = new Wrapper_DateComponent(this.injectorGet(import8.DateService,this.parentIndex));
+    this._DateComponent_0_3 = new Wrapper_DateComponent(this.injectorGet(import8.DateService,this.parentIndex),this.injectorGet(import9.DataService,this.parentIndex));
     this.compView_0.create(this._DateComponent_0_3.context);
     this.init(this._el_0,((<any>this.renderer).directRenderer? (null as any): [this._el_0]),(null as any));
     return new import7.ComponentRef_<any>(0,this,this._el_0,this._DateComponent_0_3.context);
@@ -117,13 +118,13 @@ class View_DateComponent_Host0 extends import2.AppView<any> {
   }
 }
 export const DateComponentNgFactory:import7.ComponentFactory<import0.DateComponent> = new import7.ComponentFactory<import0.DateComponent>('date-component',View_DateComponent_Host0,import0.DateComponent);
-const styles_DateComponent:any[] = [import9.styles];
+const styles_DateComponent:any[] = [import10.styles];
 var renderType_DateComponent:import4.RenderComponentType = import3.createRenderComponentType('',0,import5.ViewEncapsulation.Emulated,styles_DateComponent,{});
 export class View_DateComponent0 extends import2.AppView<import0.DateComponent> {
   _el_0:any;
-  _NgForm_0_3:import10.Wrapper_NgForm;
+  _NgForm_0_3:import11.Wrapper_NgForm;
   _ControlContainer_0_4:any;
-  _NgControlStatusGroup_0_5:import11.Wrapper_NgControlStatusGroup;
+  _NgControlStatusGroup_0_5:import12.Wrapper_NgControlStatusGroup;
   _text_1:any;
   _el_2:any;
   _text_3:any;
@@ -135,11 +136,11 @@ export class View_DateComponent0 extends import2.AppView<import0.DateComponent> 
   _text_9:any;
   _text_10:any;
   _el_11:any;
-  _DefaultValueAccessor_11_3:import12.Wrapper_DefaultValueAccessor;
+  _DefaultValueAccessor_11_3:import13.Wrapper_DefaultValueAccessor;
   _NG_VALUE_ACCESSOR_11_4:any[];
-  _NgModel_11_5:import13.Wrapper_NgModel;
+  _NgModel_11_5:import14.Wrapper_NgModel;
   _NgControl_11_6:any;
-  _NgControlStatus_11_7:import11.Wrapper_NgControlStatus;
+  _NgControlStatus_11_7:import12.Wrapper_NgControlStatus;
   _text_12:any;
   _text_13:any;
   _el_14:any;
@@ -158,9 +159,9 @@ export class View_DateComponent0 extends import2.AppView<import0.DateComponent> 
   _el_27:any;
   _text_28:any;
   _anchor_29:any;
-  /*private*/ _vc_29:import14.ViewContainer;
+  /*private*/ _vc_29:import15.ViewContainer;
   _TemplateRef_29_5:any;
-  _NgFor_29_6:import15.Wrapper_NgFor;
+  _NgFor_29_6:import16.Wrapper_NgFor;
   _text_30:any;
   _text_31:any;
   _text_32:any;
@@ -185,9 +186,9 @@ export class View_DateComponent0 extends import2.AppView<import0.DateComponent> 
   _el_51:any;
   _text_52:any;
   _anchor_53:any;
-  /*private*/ _vc_53:import14.ViewContainer;
+  /*private*/ _vc_53:import15.ViewContainer;
   _TemplateRef_53_5:any;
-  _NgFor_53_6:import15.Wrapper_NgFor;
+  _NgFor_53_6:import16.Wrapper_NgFor;
   _text_54:any;
   _text_55:any;
   _text_56:any;
@@ -203,6 +204,8 @@ export class View_DateComponent0 extends import2.AppView<import0.DateComponent> 
   /*private*/ _expr_80:any;
   /*private*/ _expr_81:any;
   /*private*/ _expr_82:any;
+  /*private*/ _expr_83:any;
+  /*private*/ _expr_84:any;
   constructor(viewUtils:import3.ViewUtils,parentView:import2.AppView<any>,parentIndex:number,parentElement:any) {
     super(View_DateComponent0,renderType_DateComponent,import6.ViewType.COMPONENT,viewUtils,parentView,parentIndex,parentElement,import1.ChangeDetectorStatus.CheckAlways);
     this._expr_74 = import1.UNINITIALIZED;
@@ -214,16 +217,18 @@ export class View_DateComponent0 extends import2.AppView<import0.DateComponent> 
     this._expr_80 = import1.UNINITIALIZED;
     this._expr_81 = import1.UNINITIALIZED;
     this._expr_82 = import1.UNINITIALIZED;
+    this._expr_83 = import1.UNINITIALIZED;
+    this._expr_84 = import1.UNINITIALIZED;
   }
   createInternal(rootSelector:string):import7.ComponentRef<any> {
     const parentRenderNode:any = this.renderer.createViewRoot(this.parentElement);
     this._el_0 = import3.createRenderElement(this.renderer,parentRenderNode,'form',new import3.InlineArray2(2,'novalidate',''),(null as any));
-    this._NgForm_0_3 = new import10.Wrapper_NgForm((null as any),(null as any));
+    this._NgForm_0_3 = new import11.Wrapper_NgForm((null as any),(null as any));
     this._ControlContainer_0_4 = this._NgForm_0_3.context;
-    this._NgControlStatusGroup_0_5 = new import11.Wrapper_NgControlStatusGroup(this._ControlContainer_0_4);
+    this._NgControlStatusGroup_0_5 = new import12.Wrapper_NgControlStatusGroup(this._ControlContainer_0_4);
     this._text_1 = this.renderer.createText(this._el_0,'\n    ',(null as any));
     this._el_2 = import3.createRenderElement(this.renderer,this._el_0,'label',import3.EMPTY_INLINE_ARRAY,(null as any));
-    this._text_3 = this.renderer.createText(this._el_2,'',(null as any));
+    this._text_3 = this.renderer.createText(this._el_2,'Reference date:',(null as any));
     this._text_4 = this.renderer.createText(this._el_0,'\n    ',(null as any));
     this._el_5 = import3.createRenderElement(this.renderer,this._el_0,'span',new import3.InlineArray2(2,'class','span-inline'),(null as any));
     this._text_6 = this.renderer.createText(this._el_5,'\n    ',(null as any));
@@ -231,12 +236,12 @@ export class View_DateComponent0 extends import2.AppView<import0.DateComponent> 
     this._el_8 = import3.createRenderElement(this.renderer,this._el_7,'small',import3.EMPTY_INLINE_ARRAY,(null as any));
     this._text_9 = this.renderer.createText(this._el_8,'',(null as any));
     this._text_10 = this.renderer.createText(this._el_5,'\n    ',(null as any));
-    this._el_11 = import3.createRenderElement(this.renderer,this._el_5,'input',new import3.InlineArray8(8,'id','date-input','name','ymd','placeholder','yyyy-mm-dd','type','text'),(null as any));
-    this._DefaultValueAccessor_11_3 = new import12.Wrapper_DefaultValueAccessor(this.renderer,new import16.ElementRef(this._el_11));
+    this._el_11 = import3.createRenderElement(this.renderer,this._el_5,'input',new import3.InlineArray8(6,'id','date-input','name','ymd','type','text'),(null as any));
+    this._DefaultValueAccessor_11_3 = new import13.Wrapper_DefaultValueAccessor(this.renderer,new import17.ElementRef(this._el_11));
     this._NG_VALUE_ACCESSOR_11_4 = [this._DefaultValueAccessor_11_3.context];
-    this._NgModel_11_5 = new import13.Wrapper_NgModel(this._ControlContainer_0_4,(null as any),(null as any),this._NG_VALUE_ACCESSOR_11_4);
+    this._NgModel_11_5 = new import14.Wrapper_NgModel(this._ControlContainer_0_4,(null as any),(null as any),this._NG_VALUE_ACCESSOR_11_4);
     this._NgControl_11_6 = this._NgModel_11_5.context;
-    this._NgControlStatus_11_7 = new import11.Wrapper_NgControlStatus(this._NgControl_11_6);
+    this._NgControlStatus_11_7 = new import12.Wrapper_NgControlStatus(this._NgControl_11_6);
     this._text_12 = this.renderer.createText(this._el_5,'\n    ',(null as any));
     this._text_13 = this.renderer.createText(this._el_0,'\n    ',(null as any));
     this._el_14 = import3.createRenderElement(this.renderer,this._el_0,'button',new import3.InlineArray2(2,'class','btn btn-primary'),(null as any));
@@ -255,9 +260,9 @@ export class View_DateComponent0 extends import2.AppView<import0.DateComponent> 
     this._el_27 = import3.createRenderElement(this.renderer,this._el_21,'ul',new import3.InlineArray2(2,'class','dropdown-menu'),(null as any));
     this._text_28 = this.renderer.createText(this._el_27,'\n                    ',(null as any));
     this._anchor_29 = this.renderer.createTemplateAnchor(this._el_27,(null as any));
-    this._vc_29 = new import14.ViewContainer(29,27,this,this._anchor_29);
-    this._TemplateRef_29_5 = new import17.TemplateRef_(this,29,this._anchor_29);
-    this._NgFor_29_6 = new import15.Wrapper_NgFor(this._vc_29.vcRef,this._TemplateRef_29_5,this.parentView.injectorGet(import18.IterableDiffers,this.parentIndex),this.ref);
+    this._vc_29 = new import15.ViewContainer(29,27,this,this._anchor_29);
+    this._TemplateRef_29_5 = new import18.TemplateRef_(this,29,this._anchor_29);
+    this._NgFor_29_6 = new import16.Wrapper_NgFor(this._vc_29.vcRef,this._TemplateRef_29_5,this.parentView.injectorGet(import19.IterableDiffers,this.parentIndex),this.ref);
     this._text_30 = this.renderer.createText(this._el_27,'\n                ',(null as any));
     this._text_31 = this.renderer.createText(this._el_21,'\n            ',(null as any));
     this._text_32 = this.renderer.createText(this._el_19,'\n        ',(null as any));
@@ -282,9 +287,9 @@ export class View_DateComponent0 extends import2.AppView<import0.DateComponent> 
     this._el_51 = import3.createRenderElement(this.renderer,this._el_45,'ul',new import3.InlineArray2(2,'class','dropdown-menu'),(null as any));
     this._text_52 = this.renderer.createText(this._el_51,'\n                    ',(null as any));
     this._anchor_53 = this.renderer.createTemplateAnchor(this._el_51,(null as any));
-    this._vc_53 = new import14.ViewContainer(53,51,this,this._anchor_53);
-    this._TemplateRef_53_5 = new import17.TemplateRef_(this,53,this._anchor_53);
-    this._NgFor_53_6 = new import15.Wrapper_NgFor(this._vc_53.vcRef,this._TemplateRef_53_5,this.parentView.injectorGet(import18.IterableDiffers,this.parentIndex),this.ref);
+    this._vc_53 = new import15.ViewContainer(53,51,this,this._anchor_53);
+    this._TemplateRef_53_5 = new import18.TemplateRef_(this,53,this._anchor_53);
+    this._NgFor_53_6 = new import16.Wrapper_NgFor(this._vc_53.vcRef,this._TemplateRef_53_5,this.parentView.injectorGet(import19.IterableDiffers,this.parentIndex),this.ref);
     this._text_54 = this.renderer.createText(this._el_51,'\n                ',(null as any));
     this._text_55 = this.renderer.createText(this._el_45,'\n            ',(null as any));
     this._text_56 = this.renderer.createText(this._el_43,'\n        ',(null as any));
@@ -370,18 +375,18 @@ export class View_DateComponent0 extends import2.AppView<import0.DateComponent> 
     return (null as any);
   }
   injectorGetInternal(token:any,requestNodeIndex:number,notFoundResult:any):any {
-    if (((token === import19.DefaultValueAccessor) && (11 === requestNodeIndex))) { return this._DefaultValueAccessor_11_3.context; }
-    if (((token === import20.NG_VALUE_ACCESSOR) && (11 === requestNodeIndex))) { return this._NG_VALUE_ACCESSOR_11_4; }
-    if (((token === import21.NgModel) && (11 === requestNodeIndex))) { return this._NgModel_11_5.context; }
-    if (((token === import22.NgControl) && (11 === requestNodeIndex))) { return this._NgControl_11_6; }
-    if (((token === import23.NgControlStatus) && (11 === requestNodeIndex))) { return this._NgControlStatus_11_7.context; }
-    if (((token === import17.TemplateRef) && (29 === requestNodeIndex))) { return this._TemplateRef_29_5; }
-    if (((token === import24.NgFor) && (29 === requestNodeIndex))) { return this._NgFor_29_6.context; }
-    if (((token === import17.TemplateRef) && (53 === requestNodeIndex))) { return this._TemplateRef_53_5; }
-    if (((token === import24.NgFor) && (53 === requestNodeIndex))) { return this._NgFor_53_6.context; }
-    if (((token === import25.NgForm) && ((0 <= requestNodeIndex) && (requestNodeIndex <= 58)))) { return this._NgForm_0_3.context; }
-    if (((token === import26.ControlContainer) && ((0 <= requestNodeIndex) && (requestNodeIndex <= 58)))) { return this._ControlContainer_0_4; }
-    if (((token === import23.NgControlStatusGroup) && ((0 <= requestNodeIndex) && (requestNodeIndex <= 58)))) { return this._NgControlStatusGroup_0_5.context; }
+    if (((token === import20.DefaultValueAccessor) && (11 === requestNodeIndex))) { return this._DefaultValueAccessor_11_3.context; }
+    if (((token === import21.NG_VALUE_ACCESSOR) && (11 === requestNodeIndex))) { return this._NG_VALUE_ACCESSOR_11_4; }
+    if (((token === import22.NgModel) && (11 === requestNodeIndex))) { return this._NgModel_11_5.context; }
+    if (((token === import23.NgControl) && (11 === requestNodeIndex))) { return this._NgControl_11_6; }
+    if (((token === import24.NgControlStatus) && (11 === requestNodeIndex))) { return this._NgControlStatus_11_7.context; }
+    if (((token === import18.TemplateRef) && (29 === requestNodeIndex))) { return this._TemplateRef_29_5; }
+    if (((token === import25.NgFor) && (29 === requestNodeIndex))) { return this._NgFor_29_6.context; }
+    if (((token === import18.TemplateRef) && (53 === requestNodeIndex))) { return this._TemplateRef_53_5; }
+    if (((token === import25.NgFor) && (53 === requestNodeIndex))) { return this._NgFor_53_6.context; }
+    if (((token === import26.NgForm) && ((0 <= requestNodeIndex) && (requestNodeIndex <= 58)))) { return this._NgForm_0_3.context; }
+    if (((token === import27.ControlContainer) && ((0 <= requestNodeIndex) && (requestNodeIndex <= 58)))) { return this._ControlContainer_0_4; }
+    if (((token === import24.NgControlStatusGroup) && ((0 <= requestNodeIndex) && (requestNodeIndex <= 58)))) { return this._NgControlStatusGroup_0_5.context; }
     return notFoundResult;
   }
   detectChangesInternal(throwOnChange:boolean):void {
@@ -403,14 +408,14 @@ export class View_DateComponent0 extends import2.AppView<import0.DateComponent> 
     this._vc_29.detectChangesInNestedViews(throwOnChange);
     this._vc_53.detectChangesInNestedViews(throwOnChange);
     this._NgControlStatusGroup_0_5.checkHost(this,this,this._el_0,throwOnChange);
-    const currVal_74:any = import3.inlineInterpolate(1,'Update ',this.context.currentDate,'');
+    const currVal_74:any = import3.inlineInterpolate(2,'Range: ',this.context.min,' to ',this.context.max,'');
     if (import3.checkBinding(throwOnChange,this._expr_74,currVal_74)) {
-      this.renderer.setText(this._text_3,currVal_74);
+      this.renderer.setText(this._text_9,currVal_74);
       this._expr_74 = currVal_74;
     }
-    const currVal_75:any = import3.inlineInterpolate(2,'Range: ',this.context.min,' to ',this.context.max,'');
+    const currVal_75:any = this.context.currentDate;
     if (import3.checkBinding(throwOnChange,this._expr_75,currVal_75)) {
-      this.renderer.setText(this._text_9,currVal_75);
+      this.renderer.setElementProperty(this._el_11,'placeholder',currVal_75);
       this._expr_75 = currVal_75;
     }
     const currVal_76:any = this.context.inputDate.valid;
@@ -429,25 +434,35 @@ export class View_DateComponent0 extends import2.AppView<import0.DateComponent> 
       this.renderer.setElementProperty(this._el_14,'disabled',currVal_78);
       this._expr_78 = currVal_78;
     }
-    const currVal_79:any = import3.inlineInterpolate(2,'Jump trading ',this.context.jump,' ',((this.context.jump === 1)? 'day': 'days'),'');
+    const currVal_79:any = this.context.jumpTooltip;
     if (import3.checkBinding(throwOnChange,this._expr_79,currVal_79)) {
-      this.renderer.setText(this._text_24,currVal_79);
+      this.renderer.setElementProperty(this._el_23,'title',currVal_79);
       this._expr_79 = currVal_79;
     }
-    const currVal_80:any = (this.context.currentDate === this.context.validDates[0]);
+    const currVal_80:any = import3.inlineInterpolate(2,'Jump trading ',this.context.jump,' ',((this.context.jump === 1)? 'day': 'days'),'');
     if (import3.checkBinding(throwOnChange,this._expr_80,currVal_80)) {
-      this.renderer.setElementProperty(this._el_35,'disabled',currVal_80);
+      this.renderer.setText(this._text_24,currVal_80);
       this._expr_80 = currVal_80;
     }
-    const currVal_81:any = (this.context.currentDate === this.context.validDates[(this.context.validDates.length - 1)]);
+    const currVal_81:any = (this.context.currentDate === this.context.validDates[0]);
     if (import3.checkBinding(throwOnChange,this._expr_81,currVal_81)) {
-      this.renderer.setElementProperty(this._el_38,'disabled',currVal_81);
+      this.renderer.setElementProperty(this._el_35,'disabled',currVal_81);
       this._expr_81 = currVal_81;
     }
-    const currVal_82:any = import3.inlineInterpolate(2,'Holding Period: ',this.context.hp,'  trading ',((this.context.hp === 1)? 'day': 'days'),'');
+    const currVal_82:any = (this.context.currentDate === this.context.validDates[(this.context.validDates.length - 1)]);
     if (import3.checkBinding(throwOnChange,this._expr_82,currVal_82)) {
-      this.renderer.setText(this._text_48,currVal_82);
+      this.renderer.setElementProperty(this._el_38,'disabled',currVal_82);
       this._expr_82 = currVal_82;
+    }
+    const currVal_83:any = this.context.hpTootlip;
+    if (import3.checkBinding(throwOnChange,this._expr_83,currVal_83)) {
+      this.renderer.setElementProperty(this._el_47,'title',currVal_83);
+      this._expr_83 = currVal_83;
+    }
+    const currVal_84:any = import3.inlineInterpolate(2,'Holding Period: ',this.context.hp,'  trading ',((this.context.hp === 1)? 'day': 'days'),'');
+    if (import3.checkBinding(throwOnChange,this._expr_84,currVal_84)) {
+      this.renderer.setText(this._text_48,currVal_84);
+      this._expr_84 = currVal_84;
     }
   }
   destroyInternal():void {
@@ -514,7 +529,7 @@ class View_DateComponent1 extends import2.AppView<any> {
   _el_1:any;
   _text_2:any;
   /*private*/ _expr_3:any;
-  constructor(viewUtils:import3.ViewUtils,parentView:import2.AppView<any>,parentIndex:number,parentElement:any,declaredViewContainer:import14.ViewContainer) {
+  constructor(viewUtils:import3.ViewUtils,parentView:import2.AppView<any>,parentIndex:number,parentElement:any,declaredViewContainer:import15.ViewContainer) {
     super(View_DateComponent1,renderType_DateComponent,import6.ViewType.EMBEDDED,viewUtils,parentView,parentIndex,parentElement,import1.ChangeDetectorStatus.CheckAlways,declaredViewContainer);
     this._expr_3 = import1.UNINITIALIZED;
   }
@@ -556,7 +571,7 @@ class View_DateComponent2 extends import2.AppView<any> {
   _el_1:any;
   _text_2:any;
   /*private*/ _expr_3:any;
-  constructor(viewUtils:import3.ViewUtils,parentView:import2.AppView<any>,parentIndex:number,parentElement:any,declaredViewContainer:import14.ViewContainer) {
+  constructor(viewUtils:import3.ViewUtils,parentView:import2.AppView<any>,parentIndex:number,parentElement:any,declaredViewContainer:import15.ViewContainer) {
     super(View_DateComponent2,renderType_DateComponent,import6.ViewType.EMBEDDED,viewUtils,parentView,parentIndex,parentElement,import1.ChangeDetectorStatus.CheckAlways,declaredViewContainer);
     this._expr_3 = import1.UNINITIALIZED;
   }

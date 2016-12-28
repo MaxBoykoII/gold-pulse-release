@@ -360,7 +360,7 @@ export class View_ExplorationViewer0 extends import1.AppView<import0.Exploration
     this._text_108 = this.renderer.createText(this._el_107,'\n    ',(null as any));
     this._el_109 = import3.createRenderElement(this.renderer,this._el_107,'date-component',import3.EMPTY_INLINE_ARRAY,(null as any));
     this.compView_109 = new import13.View_DateComponent0(this.viewUtils,this,109,this._el_109);
-    this._DateComponent_109_3 = new import13.Wrapper_DateComponent(this.parentView.injectorGet(import19.DateService,this.parentIndex));
+    this._DateComponent_109_3 = new import13.Wrapper_DateComponent(this.parentView.injectorGet(import19.DateService,this.parentIndex),this.parentView.injectorGet(import8.DataService,this.parentIndex));
     this._text_110 = this.renderer.createText((null as any),'\n    ',(null as any));
     this.compView_109.create(this._DateComponent_109_3.context);
     this._text_111 = this.renderer.createText(this._el_107,'\n',(null as any));

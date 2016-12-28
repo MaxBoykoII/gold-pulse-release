@@ -1,9 +1,11 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { DateService } from '../services/date.service';
+import { DataService } from '../services/data.service';
 import { hpOptions, jump, jumpOptions, gap, gapOptions } from '../constants';
 export var DateComponent = (function () {
-    function DateComponent(dateService) {
-        this.dateService = dateService;
+    function DateComponent(_dateService, _dataService) {
+        this._dateService = _dateService;
+        this._dataService = _dataService;
         this.hpOptions = hpOptions;
         this.jump = jump;
         this.jumpOptions = jumpOptions;
@@ -19,12 +21,23 @@ export var DateComponent = (function () {
     }
     DateComponent.prototype.ngOnInit = function () {
         var _this = this;
-        this.dateService.getValidDates().subscribe(function (dates) {
+        this._dateService.getValidDates().subscribe(function (dates) {
             _this.validDates = dates;
             var length = dates.length;
             if (length) {
                 _this.min = dates[0];
                 _this.max = dates[length - 1];
+            }
+        });
+        this._dataService.config().subscribe(function (config) {
+            if (config.jump) {
+                _this.jump = config.jump.default;
+                _this.jumpOptions = config.jump.values;
+                _this.jumpTooltip = config.jump.tooltip;
+            }
+            if (config.hold) {
+                _this.hpOptions = config.hold.values;
+                _this.hpTootlip = config.hold.tooltip;
             }
         });
     };
@@ -74,6 +87,7 @@ export var DateComponent = (function () {
     /** @nocollapse */
     DateComponent.ctorParameters = [
         { type: DateService, },
+        { type: DataService, },
     ];
     DateComponent.propDecorators = {
         'currentDate': [{ type: Input },],

@@ -17,28 +17,29 @@ import * as import5 from '@angular/core/src/metadata/view';
 import * as import6 from '@angular/core/src/linker/view_type';
 import * as import7 from '@angular/core/src/linker/component_factory';
 import * as import8 from '../../../app/services/date.service';
-import * as import9 from './css/date.component.css.shim';
-import * as import10 from '../../node_modules/@angular/forms/src/directives/ng_form.ngfactory';
-import * as import11 from '../../node_modules/@angular/forms/src/directives/ng_control_status.ngfactory';
-import * as import12 from '../../node_modules/@angular/forms/src/directives/default_value_accessor.ngfactory';
-import * as import13 from '../../node_modules/@angular/forms/src/directives/ng_model.ngfactory';
-import * as import14 from '@angular/core/src/linker/view_container';
-import * as import15 from '../../node_modules/@angular/common/src/directives/ng_for.ngfactory';
-import * as import16 from '@angular/core/src/linker/element_ref';
-import * as import17 from '@angular/core/src/linker/template_ref';
-import * as import18 from '@angular/core/src/change_detection/differs/iterable_differs';
-import * as import19 from '@angular/forms/src/directives/default_value_accessor';
-import * as import20 from '@angular/forms/src/directives/control_value_accessor';
-import * as import21 from '@angular/forms/src/directives/ng_model';
-import * as import22 from '@angular/forms/src/directives/ng_control';
-import * as import23 from '@angular/forms/src/directives/ng_control_status';
-import * as import24 from '@angular/common/src/directives/ng_for';
-import * as import25 from '@angular/forms/src/directives/ng_form';
-import * as import26 from '@angular/forms/src/directives/control_container';
+import * as import9 from '../../../app/services/data.service';
+import * as import10 from './css/date.component.css.shim';
+import * as import11 from '../../node_modules/@angular/forms/src/directives/ng_form.ngfactory';
+import * as import12 from '../../node_modules/@angular/forms/src/directives/ng_control_status.ngfactory';
+import * as import13 from '../../node_modules/@angular/forms/src/directives/default_value_accessor.ngfactory';
+import * as import14 from '../../node_modules/@angular/forms/src/directives/ng_model.ngfactory';
+import * as import15 from '@angular/core/src/linker/view_container';
+import * as import16 from '../../node_modules/@angular/common/src/directives/ng_for.ngfactory';
+import * as import17 from '@angular/core/src/linker/element_ref';
+import * as import18 from '@angular/core/src/linker/template_ref';
+import * as import19 from '@angular/core/src/change_detection/differs/iterable_differs';
+import * as import20 from '@angular/forms/src/directives/default_value_accessor';
+import * as import21 from '@angular/forms/src/directives/control_value_accessor';
+import * as import22 from '@angular/forms/src/directives/ng_model';
+import * as import23 from '@angular/forms/src/directives/ng_control';
+import * as import24 from '@angular/forms/src/directives/ng_control_status';
+import * as import25 from '@angular/common/src/directives/ng_for';
+import * as import26 from '@angular/forms/src/directives/ng_form';
+import * as import27 from '@angular/forms/src/directives/control_container';
 export var Wrapper_DateComponent = (function () {
-    function Wrapper_DateComponent(p0) {
+    function Wrapper_DateComponent(p0, p1) {
         this._changed = false;
-        this.context = new import0.DateComponent(p0);
+        this.context = new import0.DateComponent(p0, p1);
         this._expr_0 = import1.UNINITIALIZED;
         this._expr_1 = import1.UNINITIALIZED;
     }
@@ -98,7 +99,7 @@ var View_DateComponent_Host0 = (function (_super) {
     View_DateComponent_Host0.prototype.createInternal = function (rootSelector) {
         this._el_0 = import3.selectOrCreateRenderHostElement(this.renderer, 'date-component', import3.EMPTY_INLINE_ARRAY, rootSelector, null);
         this.compView_0 = new View_DateComponent0(this.viewUtils, this, 0, this._el_0);
-        this._DateComponent_0_3 = new Wrapper_DateComponent(this.injectorGet(import8.DateService, this.parentIndex));
+        this._DateComponent_0_3 = new Wrapper_DateComponent(this.injectorGet(import8.DateService, this.parentIndex), this.injectorGet(import9.DataService, this.parentIndex));
         this.compView_0.create(this._DateComponent_0_3.context);
         this.init(this._el_0, (this.renderer.directRenderer ? null : [this._el_0]), null);
         return new import7.ComponentRef_(0, this, this._el_0, this._DateComponent_0_3.context);
@@ -123,7 +124,7 @@ var View_DateComponent_Host0 = (function (_super) {
     return View_DateComponent_Host0;
 }(import2.AppView));
 export var DateComponentNgFactory = new import7.ComponentFactory('date-component', View_DateComponent_Host0, import0.DateComponent);
-var styles_DateComponent = [import9.styles];
+var styles_DateComponent = [import10.styles];
 var renderType_DateComponent = import3.createRenderComponentType('', 0, import5.ViewEncapsulation.Emulated, styles_DateComponent, {});
 export var View_DateComponent0 = (function (_super) {
     __extends(View_DateComponent0, _super);
@@ -138,16 +139,18 @@ export var View_DateComponent0 = (function (_super) {
         this._expr_80 = import1.UNINITIALIZED;
         this._expr_81 = import1.UNINITIALIZED;
         this._expr_82 = import1.UNINITIALIZED;
+        this._expr_83 = import1.UNINITIALIZED;
+        this._expr_84 = import1.UNINITIALIZED;
     }
     View_DateComponent0.prototype.createInternal = function (rootSelector) {
         var parentRenderNode = this.renderer.createViewRoot(this.parentElement);
         this._el_0 = import3.createRenderElement(this.renderer, parentRenderNode, 'form', new import3.InlineArray2(2, 'novalidate', ''), null);
-        this._NgForm_0_3 = new import10.Wrapper_NgForm(null, null);
+        this._NgForm_0_3 = new import11.Wrapper_NgForm(null, null);
         this._ControlContainer_0_4 = this._NgForm_0_3.context;
-        this._NgControlStatusGroup_0_5 = new import11.Wrapper_NgControlStatusGroup(this._ControlContainer_0_4);
+        this._NgControlStatusGroup_0_5 = new import12.Wrapper_NgControlStatusGroup(this._ControlContainer_0_4);
         this._text_1 = this.renderer.createText(this._el_0, '\n    ', null);
         this._el_2 = import3.createRenderElement(this.renderer, this._el_0, 'label', import3.EMPTY_INLINE_ARRAY, null);
-        this._text_3 = this.renderer.createText(this._el_2, '', null);
+        this._text_3 = this.renderer.createText(this._el_2, 'Reference date:', null);
         this._text_4 = this.renderer.createText(this._el_0, '\n    ', null);
         this._el_5 = import3.createRenderElement(this.renderer, this._el_0, 'span', new import3.InlineArray2(2, 'class', 'span-inline'), null);
         this._text_6 = this.renderer.createText(this._el_5, '\n    ', null);
@@ -155,12 +158,12 @@ export var View_DateComponent0 = (function (_super) {
         this._el_8 = import3.createRenderElement(this.renderer, this._el_7, 'small', import3.EMPTY_INLINE_ARRAY, null);
         this._text_9 = this.renderer.createText(this._el_8, '', null);
         this._text_10 = this.renderer.createText(this._el_5, '\n    ', null);
-        this._el_11 = import3.createRenderElement(this.renderer, this._el_5, 'input', new import3.InlineArray8(8, 'id', 'date-input', 'name', 'ymd', 'placeholder', 'yyyy-mm-dd', 'type', 'text'), null);
-        this._DefaultValueAccessor_11_3 = new import12.Wrapper_DefaultValueAccessor(this.renderer, new import16.ElementRef(this._el_11));
+        this._el_11 = import3.createRenderElement(this.renderer, this._el_5, 'input', new import3.InlineArray8(6, 'id', 'date-input', 'name', 'ymd', 'type', 'text'), null);
+        this._DefaultValueAccessor_11_3 = new import13.Wrapper_DefaultValueAccessor(this.renderer, new import17.ElementRef(this._el_11));
         this._NG_VALUE_ACCESSOR_11_4 = [this._DefaultValueAccessor_11_3.context];
-        this._NgModel_11_5 = new import13.Wrapper_NgModel(this._ControlContainer_0_4, null, null, this._NG_VALUE_ACCESSOR_11_4);
+        this._NgModel_11_5 = new import14.Wrapper_NgModel(this._ControlContainer_0_4, null, null, this._NG_VALUE_ACCESSOR_11_4);
         this._NgControl_11_6 = this._NgModel_11_5.context;
-        this._NgControlStatus_11_7 = new import11.Wrapper_NgControlStatus(this._NgControl_11_6);
+        this._NgControlStatus_11_7 = new import12.Wrapper_NgControlStatus(this._NgControl_11_6);
         this._text_12 = this.renderer.createText(this._el_5, '\n    ', null);
         this._text_13 = this.renderer.createText(this._el_0, '\n    ', null);
         this._el_14 = import3.createRenderElement(this.renderer, this._el_0, 'button', new import3.InlineArray2(2, 'class', 'btn btn-primary'), null);
@@ -179,9 +182,9 @@ export var View_DateComponent0 = (function (_super) {
         this._el_27 = import3.createRenderElement(this.renderer, this._el_21, 'ul', new import3.InlineArray2(2, 'class', 'dropdown-menu'), null);
         this._text_28 = this.renderer.createText(this._el_27, '\n                    ', null);
         this._anchor_29 = this.renderer.createTemplateAnchor(this._el_27, null);
-        this._vc_29 = new import14.ViewContainer(29, 27, this, this._anchor_29);
-        this._TemplateRef_29_5 = new import17.TemplateRef_(this, 29, this._anchor_29);
-        this._NgFor_29_6 = new import15.Wrapper_NgFor(this._vc_29.vcRef, this._TemplateRef_29_5, this.parentView.injectorGet(import18.IterableDiffers, this.parentIndex), this.ref);
+        this._vc_29 = new import15.ViewContainer(29, 27, this, this._anchor_29);
+        this._TemplateRef_29_5 = new import18.TemplateRef_(this, 29, this._anchor_29);
+        this._NgFor_29_6 = new import16.Wrapper_NgFor(this._vc_29.vcRef, this._TemplateRef_29_5, this.parentView.injectorGet(import19.IterableDiffers, this.parentIndex), this.ref);
         this._text_30 = this.renderer.createText(this._el_27, '\n                ', null);
         this._text_31 = this.renderer.createText(this._el_21, '\n            ', null);
         this._text_32 = this.renderer.createText(this._el_19, '\n        ', null);
@@ -206,9 +209,9 @@ export var View_DateComponent0 = (function (_super) {
         this._el_51 = import3.createRenderElement(this.renderer, this._el_45, 'ul', new import3.InlineArray2(2, 'class', 'dropdown-menu'), null);
         this._text_52 = this.renderer.createText(this._el_51, '\n                    ', null);
         this._anchor_53 = this.renderer.createTemplateAnchor(this._el_51, null);
-        this._vc_53 = new import14.ViewContainer(53, 51, this, this._anchor_53);
-        this._TemplateRef_53_5 = new import17.TemplateRef_(this, 53, this._anchor_53);
-        this._NgFor_53_6 = new import15.Wrapper_NgFor(this._vc_53.vcRef, this._TemplateRef_53_5, this.parentView.injectorGet(import18.IterableDiffers, this.parentIndex), this.ref);
+        this._vc_53 = new import15.ViewContainer(53, 51, this, this._anchor_53);
+        this._TemplateRef_53_5 = new import18.TemplateRef_(this, 53, this._anchor_53);
+        this._NgFor_53_6 = new import16.Wrapper_NgFor(this._vc_53.vcRef, this._TemplateRef_53_5, this.parentView.injectorGet(import19.IterableDiffers, this.parentIndex), this.ref);
         this._text_54 = this.renderer.createText(this._el_51, '\n                ', null);
         this._text_55 = this.renderer.createText(this._el_45, '\n            ', null);
         this._text_56 = this.renderer.createText(this._el_43, '\n        ', null);
@@ -292,40 +295,40 @@ export var View_DateComponent0 = (function (_super) {
         return null;
     };
     View_DateComponent0.prototype.injectorGetInternal = function (token, requestNodeIndex, notFoundResult) {
-        if (((token === import19.DefaultValueAccessor) && (11 === requestNodeIndex))) {
+        if (((token === import20.DefaultValueAccessor) && (11 === requestNodeIndex))) {
             return this._DefaultValueAccessor_11_3.context;
         }
-        if (((token === import20.NG_VALUE_ACCESSOR) && (11 === requestNodeIndex))) {
+        if (((token === import21.NG_VALUE_ACCESSOR) && (11 === requestNodeIndex))) {
             return this._NG_VALUE_ACCESSOR_11_4;
         }
-        if (((token === import21.NgModel) && (11 === requestNodeIndex))) {
+        if (((token === import22.NgModel) && (11 === requestNodeIndex))) {
             return this._NgModel_11_5.context;
         }
-        if (((token === import22.NgControl) && (11 === requestNodeIndex))) {
+        if (((token === import23.NgControl) && (11 === requestNodeIndex))) {
             return this._NgControl_11_6;
         }
-        if (((token === import23.NgControlStatus) && (11 === requestNodeIndex))) {
+        if (((token === import24.NgControlStatus) && (11 === requestNodeIndex))) {
             return this._NgControlStatus_11_7.context;
         }
-        if (((token === import17.TemplateRef) && (29 === requestNodeIndex))) {
+        if (((token === import18.TemplateRef) && (29 === requestNodeIndex))) {
             return this._TemplateRef_29_5;
         }
-        if (((token === import24.NgFor) && (29 === requestNodeIndex))) {
+        if (((token === import25.NgFor) && (29 === requestNodeIndex))) {
             return this._NgFor_29_6.context;
         }
-        if (((token === import17.TemplateRef) && (53 === requestNodeIndex))) {
+        if (((token === import18.TemplateRef) && (53 === requestNodeIndex))) {
             return this._TemplateRef_53_5;
         }
-        if (((token === import24.NgFor) && (53 === requestNodeIndex))) {
+        if (((token === import25.NgFor) && (53 === requestNodeIndex))) {
             return this._NgFor_53_6.context;
         }
-        if (((token === import25.NgForm) && ((0 <= requestNodeIndex) && (requestNodeIndex <= 58)))) {
+        if (((token === import26.NgForm) && ((0 <= requestNodeIndex) && (requestNodeIndex <= 58)))) {
             return this._NgForm_0_3.context;
         }
-        if (((token === import26.ControlContainer) && ((0 <= requestNodeIndex) && (requestNodeIndex <= 58)))) {
+        if (((token === import27.ControlContainer) && ((0 <= requestNodeIndex) && (requestNodeIndex <= 58)))) {
             return this._ControlContainer_0_4;
         }
-        if (((token === import23.NgControlStatusGroup) && ((0 <= requestNodeIndex) && (requestNodeIndex <= 58)))) {
+        if (((token === import24.NgControlStatusGroup) && ((0 <= requestNodeIndex) && (requestNodeIndex <= 58)))) {
             return this._NgControlStatusGroup_0_5.context;
         }
         return notFoundResult;
@@ -349,14 +352,14 @@ export var View_DateComponent0 = (function (_super) {
         this._vc_29.detectChangesInNestedViews(throwOnChange);
         this._vc_53.detectChangesInNestedViews(throwOnChange);
         this._NgControlStatusGroup_0_5.checkHost(this, this, this._el_0, throwOnChange);
-        var currVal_74 = import3.inlineInterpolate(1, 'Update ', this.context.currentDate, '');
+        var currVal_74 = import3.inlineInterpolate(2, 'Range: ', this.context.min, ' to ', this.context.max, '');
         if (import3.checkBinding(throwOnChange, this._expr_74, currVal_74)) {
-            this.renderer.setText(this._text_3, currVal_74);
+            this.renderer.setText(this._text_9, currVal_74);
             this._expr_74 = currVal_74;
         }
-        var currVal_75 = import3.inlineInterpolate(2, 'Range: ', this.context.min, ' to ', this.context.max, '');
+        var currVal_75 = this.context.currentDate;
         if (import3.checkBinding(throwOnChange, this._expr_75, currVal_75)) {
-            this.renderer.setText(this._text_9, currVal_75);
+            this.renderer.setElementProperty(this._el_11, 'placeholder', currVal_75);
             this._expr_75 = currVal_75;
         }
         var currVal_76 = this.context.inputDate.valid;
@@ -375,25 +378,35 @@ export var View_DateComponent0 = (function (_super) {
             this.renderer.setElementProperty(this._el_14, 'disabled', currVal_78);
             this._expr_78 = currVal_78;
         }
-        var currVal_79 = import3.inlineInterpolate(2, 'Jump trading ', this.context.jump, ' ', ((this.context.jump === 1) ? 'day' : 'days'), '');
+        var currVal_79 = this.context.jumpTooltip;
         if (import3.checkBinding(throwOnChange, this._expr_79, currVal_79)) {
-            this.renderer.setText(this._text_24, currVal_79);
+            this.renderer.setElementProperty(this._el_23, 'title', currVal_79);
             this._expr_79 = currVal_79;
         }
-        var currVal_80 = (this.context.currentDate === this.context.validDates[0]);
+        var currVal_80 = import3.inlineInterpolate(2, 'Jump trading ', this.context.jump, ' ', ((this.context.jump === 1) ? 'day' : 'days'), '');
         if (import3.checkBinding(throwOnChange, this._expr_80, currVal_80)) {
-            this.renderer.setElementProperty(this._el_35, 'disabled', currVal_80);
+            this.renderer.setText(this._text_24, currVal_80);
             this._expr_80 = currVal_80;
         }
-        var currVal_81 = (this.context.currentDate === this.context.validDates[(this.context.validDates.length - 1)]);
+        var currVal_81 = (this.context.currentDate === this.context.validDates[0]);
         if (import3.checkBinding(throwOnChange, this._expr_81, currVal_81)) {
-            this.renderer.setElementProperty(this._el_38, 'disabled', currVal_81);
+            this.renderer.setElementProperty(this._el_35, 'disabled', currVal_81);
             this._expr_81 = currVal_81;
         }
-        var currVal_82 = import3.inlineInterpolate(2, 'Holding Period: ', this.context.hp, '  trading ', ((this.context.hp === 1) ? 'day' : 'days'), '');
+        var currVal_82 = (this.context.currentDate === this.context.validDates[(this.context.validDates.length - 1)]);
         if (import3.checkBinding(throwOnChange, this._expr_82, currVal_82)) {
-            this.renderer.setText(this._text_48, currVal_82);
+            this.renderer.setElementProperty(this._el_38, 'disabled', currVal_82);
             this._expr_82 = currVal_82;
+        }
+        var currVal_83 = this.context.hpTootlip;
+        if (import3.checkBinding(throwOnChange, this._expr_83, currVal_83)) {
+            this.renderer.setElementProperty(this._el_47, 'title', currVal_83);
+            this._expr_83 = currVal_83;
+        }
+        var currVal_84 = import3.inlineInterpolate(2, 'Holding Period: ', this.context.hp, '  trading ', ((this.context.hp === 1) ? 'day' : 'days'), '');
+        if (import3.checkBinding(throwOnChange, this._expr_84, currVal_84)) {
+            this.renderer.setText(this._text_48, currVal_84);
+            this._expr_84 = currVal_84;
         }
     };
     View_DateComponent0.prototype.destroyInternal = function () {
