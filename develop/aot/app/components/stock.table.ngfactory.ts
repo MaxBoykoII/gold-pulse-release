@@ -895,7 +895,7 @@ class View_StockTable6 extends import2.AppView<any> {
     return (null as any);
   }
   detectChangesInternal(throwOnChange:boolean):void {
-    const currVal_2:any = import3.inlineInterpolate(1,'',this.context.$implicit,'');
+    const currVal_2:any = import3.inlineInterpolate(1,'Return on ',this.context.$implicit,'');
     if (import3.checkBinding(throwOnChange,this._expr_2,currVal_2)) {
       this.renderer.setText(this._text_1,currVal_2);
       this._expr_2 = currVal_2;

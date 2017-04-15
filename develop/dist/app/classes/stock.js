@@ -20,8 +20,8 @@ export var Stock = (function () {
                 var rollbacks = oid.rb;
                 for (var _i = 0, rollbacks_1 = rollbacks; _i < rollbacks_1.length; _i++) {
                     var rollback = rollbacks_1[_i];
-                    //If rollback occurred strictly after ref date and strictly before ymd, adjust f
-                    if (Date.parse(rollback.d) > timestampRef && Date.parse(rollback.d) < Date.parse(ymd)) {
+                    //If rollback occurred after or on ref date and before or on ymd, adjust f
+                    if (Date.parse(rollback.d) > timestampRef && Date.parse(rollback.d) <= Date.parse(ymd)) {
                         f = f * rollback.f;
                     }
                 }

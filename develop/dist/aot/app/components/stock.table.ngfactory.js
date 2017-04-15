@@ -789,7 +789,7 @@ var View_StockTable6 = (function (_super) {
         return null;
     };
     View_StockTable6.prototype.detectChangesInternal = function (throwOnChange) {
-        var currVal_2 = import3.inlineInterpolate(1, '', this.context.$implicit, '');
+        var currVal_2 = import3.inlineInterpolate(1, 'Return on ', this.context.$implicit, '');
         if (import3.checkBinding(throwOnChange, this._expr_2, currVal_2)) {
             this.renderer.setText(this._text_1, currVal_2);
             this._expr_2 = currVal_2;
