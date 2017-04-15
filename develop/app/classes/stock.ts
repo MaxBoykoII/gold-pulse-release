@@ -26,8 +26,8 @@ export class Stock {
                 const timestampRef = Date.parse(currentDate); //timestamp for currentDate
                 const rollbacks = oid.rb;
                 for(let rollback of rollbacks) {
-                    //If rollback occurred strictly after ref date and strictly before ymd, adjust f
-                    if(Date.parse(rollback.d) > timestampRef && Date.parse(rollback.d) < Date.parse(ymd)){
+                    //If rollback occurred after or on ref date and before or on ymd, adjust f
+                    if(Date.parse(rollback.d) > timestampRef && Date.parse(rollback.d) <= Date.parse(ymd)){
                         f = f * rollback.f;
                     }
                 }
