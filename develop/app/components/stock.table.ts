@@ -19,6 +19,7 @@ import { Stock } from '../classes/stock';
 })
 export class StockTable {
     @Input() stocks;
+    @Input() hp
     @Input() metaDefs;
     @Input() currentDate;
     @Input() futureDates;

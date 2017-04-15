@@ -93,6 +93,7 @@ export var StockTable = (function () {
     ];
     StockTable.propDecorators = {
         'stocks': [{ type: Input },],
+        'hp': [{ type: Input },],
         'metaDefs': [{ type: Input },],
         'currentDate': [{ type: Input },],
         'futureDates': [{ type: Input },],

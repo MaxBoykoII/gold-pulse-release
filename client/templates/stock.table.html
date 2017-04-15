@@ -12,9 +12,10 @@
         </caption>
         <thead>
             <tr>
-                <td> Reference Date</td>
-                <td> Limit</td>
-                <td> Spread</td>
+                <td>Reference Date</td>
+                <td>Holding Period</td>
+                <td>Limit</td>
+                <td>Spread</td>
                 <td *ngFor='let metaDef of metaDefs | metric' [class.highlight]='selection === metaDef.sid'><a href="" [class.highlight]='selection === metaDef.sid' (click)='select($event, metaDef.sid)' data-toggle="tooltip" [title]="metaDef.full">{{metaDef.short}}</a></td>
                 <td *ngFor='let cpMetaDef of cpMetaDefs'>{{cpMetaDef.short}}</td>
             </tr>
@@ -22,6 +23,7 @@
         <tbody>
             <tr>
                 <td>{{currentDate}}</td>
+                <td>{{hp}}</td>
                 <td>{{limit}}</td>
                 <td>{{spread}}</td>
                 <td *ngFor='let metaDef of metaDefs | metric' [ngClass]='colorMetricAvg(metaDef)'>{{ metricAverages[metaDef.sid] | cpercent}}</td>

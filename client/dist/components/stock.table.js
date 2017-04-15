@@ -95,6 +95,10 @@ __decorate([
 __decorate([
     core_1.Input(),
     __metadata("design:type", Object)
+], StockTable.prototype, "hp", void 0);
+__decorate([
+    core_1.Input(),
+    __metadata("design:type", Object)
 ], StockTable.prototype, "metaDefs", void 0);
 __decorate([
     core_1.Input(),
