@@ -273,7 +273,7 @@ export class View_ExplorationViewer0 extends import1.AppView<import0.Exploration
     this._el_30 = import3.createRenderElement(this.renderer,this._el_28,'ul',new import3.InlineArray2(2,'class','nav navbar-nav'),(null as any));
     this._text_31 = this.renderer.createText(this._el_30,'\n                    ',(null as any));
     this._el_32 = import3.createRenderElement(this.renderer,this._el_30,'li',import3.EMPTY_INLINE_ARRAY,(null as any));
-    this._el_33 = import3.createRenderElement(this.renderer,this._el_32,'a',new import3.InlineArray4(4,'href','..about.php','target','_blank'),(null as any));
+    this._el_33 = import3.createRenderElement(this.renderer,this._el_32,'a',new import3.InlineArray4(4,'href','../about.php','target','_blank'),(null as any));
     this._text_34 = this.renderer.createText(this._el_33,'About ',(null as any));
     this._el_35 = import3.createRenderElement(this.renderer,this._el_33,'span',new import3.InlineArray2(2,'class','sr-only'),(null as any));
     this._text_36 = this.renderer.createText(this._el_35,'(current)',(null as any));
